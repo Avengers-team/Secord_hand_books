@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#319bff",
+    "navigationBarTitleText": "Upload",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#319bff",
+    "pageOrientation": "auto"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
