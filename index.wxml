@@ -1,0 +1,46 @@
+<!-- index.wxml
+<button bindtap="upload">upload</button>
+<block wx:for="{{imags}}" wx:key="index">
+  <image src='{{item}}' mode='aspectFill' style="width:200rpx; height:200rpx"></image>
+</block>
+<button bindtap="addata" type="primary">添加数据</button> -->
+
+<view class='pages'>
+  <view class='top'><text class='top_name'>二手书图片：</text></view>
+  <!-- 图片 -->
+  <view class="images_box">
+    <block wx:for="{{imags}}" wx:key="{{index}}">
+    <view class='img-box'>
+      <image class='img' mode='aspectFill' src='{{item}}'></image>
+      <view class='img-delect' data-deindex='{{index}}' bindtap='delete_images'>
+        <image class='img' src='../../images/cross.png'></image>  
+      </view>
+    </view>
+    </block>
+  <view class='img-box' bindtap='upload_images' wx:if="{{imags.length<9}}">
+    <image class='img' src='../../images/Add.jpg'></image>  
+    </view>
+  </view>
+  <view class='top'><text class='top_name'>书名：</text></view>
+  <input class='info_in' placeholder="请输入二手书书名" bindinput="addBookName"></input>
+  <view class='top'><text class='top_name'>价格：</text></view>
+  <input class='info_in' placeholder="请输入二手书价格" bindinput="addPrice"></input>
+  <view class='top'><text class='top_name'>新旧程度：</text></view>
+</view>
+
+<!-- <view class='top'><text class='top_name'>新旧程度：</text></view>  -->
+<view class='fenlei'>
+  <!-- <text>新旧程度：  </text> -->
+  <!-- 下拉框 -->
+    <view class='select_box'>
+      <view class='select' catchtap='selectTaps'>
+        <text class='select_text'>{{selectDatas[indexs]}}</text>
+        <!-- <image class='words_img' src='../../images/sanjiao.png'></image> -->
+        <image class='select_img {{shows&&"select_img_rotate"}}' src='../../images/sanjiao.png'></image>
+      </view>
+      <view class='option_box' style='height:{{shows?(selectDatas.length>5?300:selectDatas.length*60):0}}rpx;'>
+        <text class='option' style='{{indexs==selectDatas.length-1&&"border:0;"}}' wx:for='{{selectDatas}}' wx:key='this' data-index='{{index}}' catchtap='optionTaps'>{{item}}</text>
+      </view>
+    </view>
+</view>
+  <button type="default" plain="true" bindtap='addata'>上传</button>
