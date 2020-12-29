@@ -1,0 +1,47 @@
+<view class="ershoushu_index">
+  <!--搜索框 开始-->
+<SearchInput></SearchInput>
+    <!--搜索框 开始-->
+</view>
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+   <block wx:if="{{tabs[0].isActive}}">
+     <view class="first_tab">
+       <navigator class="books_item"
+        url="/pages/books_detail/index">
+         <!--左侧图片-->
+         <view class="books_img_wrap">
+           <image mode="widthFix" src="http://5b0988e595225.cdn.sohucs.com/images/20190614/fa4936ac29fe4026b9a213b039acc91e.jpeg"></image>
+         </view>
+         <!--右侧容器-->
+         <view class="books_info_wrap">
+           <view class="book_name">电子线路基础</view>
+           <view class="book_price">￥42</view>
+         </view>
+       </navigator>
+       <navigator class="books_item">
+         <!--左侧图片-->
+         <view class="books_img_wrap">
+           <image mode="widthFix" src="http://5b0988e595225.cdn.sohucs.com/images/20190614/fa4936ac29fe4026b9a213b039acc91e.jpeg"></image>
+         </view>
+         <!--右侧容器-->
+         <view class="books_info_wrap">
+           <view class="book_name">电子线路基础</view>
+           <view class="book_price">￥42</view>
+         </view>
+       </navigator>
+       <navigator class="books_item">
+         <!--左侧图片-->
+         <view class="books_img_wrap">
+           <image mode="widthFix" src="http://www.kfzimg.com/G06/M00/FF/4A/p4YBAFqh9h6AOA8uAAC8Oz7fyXY167_n.jpg"></image>
+         </view>
+         <!--右侧容器-->
+         <view class="books_info_wrap">
+           <view class="book_name">电子线路基础</view>
+           <view class="book_price">￥42</view>
+         </view>
+       </navigator>
+     </view>
+   </block>
+   <block wx:elif="{{tabs[1].isActive}}">1</block>
+   <block wx:elif="{{tabs[2].isActive}}">2</block>
+</Tabs>

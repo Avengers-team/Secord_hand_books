@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "SearchInput":"../../components/SearchInput/SearchInput",
+        "Tabs":"../../components/Tabs/Tabs"
+    },
+    "navigationBarTitleText": "二手书交易平台",
+    "enablePullDownRefresh":true,
+    "backgroundTextStyle":"dark"
+}
